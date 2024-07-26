@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <style>
+        input {
+            width: 210px;
+        }
+
+        input,
+        button {
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="n" placeholder="fibonacci ededinin sayini daxil et">
+    <button onclick="fibonacci()">Ok</button>
+    <div id="add"></div>
+
+    <script>
+        const n = document.getElementById("n");
+        const add = document.getElementById("add");
+
+        function fibonacci() {
+            let a = 0, b = 1, sum;
+            let result = '';
+            for (let i = 1; i <= n.value; i++) {
+                result += ` Fibonacci series: ${a} </br>`;
+                sum = a + b;
+                a = b;
+                b = sum;
+
+            }
+            add.innerHTML = result
+        }
+
+    </script>
+</body>
+
+</html>
